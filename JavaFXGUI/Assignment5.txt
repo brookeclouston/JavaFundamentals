@@ -1,0 +1,12 @@
+For this assignment you will complete a portion of the Pizza order system that you used with Assignment 3, but instead of the supplied console-based interface you will build your own GUI interface using JavaFX. You will need your Pizza, LineItem and IllegalPizza classes. If your classes were incomplete or did not work properly, you can use the classes supplied with the assignment 3 sample solution.
+
+You do not need to implement all of the functionality contained in the assignment 3 console interface. You do not need to save or load a pizza order from a file. You do not need to delete lines from the order or modify the quantities of line items in the order. Here is what your GUI must do:
+
+The user must be able to configure a pizza, following the same restrictions listed in assignment 3, by choosing a size, and then the cheese, ham, green pepper and pineapple toppings. The user's choices must be limited to the legal options given with the assignment.
+Display the cost of the pizza configured by the user.
+The user must be able to specify a quantity of these pizzas and must be restricted to entering an integer between 1 and 100, inclusive.
+Display the cost of this quantity of the configured pizza.
+A button is used to save the current pizza configuration and quantity as a line item which is added to the order being displayed. Instead of displaying the current order to the console, display it in the same way in a TextArea control. Every time this button is clicked by the user another line item is added to and displayed in the order.
+As the last line in the displayed order, show the total order cost (without tax!).
+Your GUI must be "monkey proof". The user must not be able to configure an illegal pizza or supply an illegal quantity. The user cannot be allowed to edit displayed costs or the displayed order. As you might expect, every time the program starts the order will be empty. Your GUI should also remain fairly stable on re-sizing and its operation should be self-explanatory and user-friendly.
+You should consider using a stylesheet (*.css) file as well as an FXML file edited by SceneBuilder, but this is not mandatory. Keep in mind, however, that a strength of JavaFX is its ability to separate appearance, layout and functionality into different files.

@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.GridPane?>
+
+<GridPane prefHeight="448.0" prefWidth="823.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller">
+   <columnConstraints>
+      <ColumnConstraints maxWidth="172.0" minWidth="10.0" prefWidth="106.0" />
+      <ColumnConstraints maxWidth="172.0" minWidth="0.0" prefWidth="33.0" />
+      <ColumnConstraints maxWidth="175.0" minWidth="0.0" prefWidth="124.0" />
+      <ColumnConstraints maxWidth="175.0" minWidth="10.0" prefWidth="63.0" />
+      <ColumnConstraints maxWidth="206.0" minWidth="10.0" prefWidth="151.0" />
+      <ColumnConstraints maxWidth="207.0" minWidth="10.0" prefWidth="161.0" />
+      <ColumnConstraints maxWidth="219.0" minWidth="10.0" prefWidth="185.0" />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" />
+      <RowConstraints maxHeight="72.0" minHeight="10.0" prefHeight="70.0" />
+      <RowConstraints maxHeight="50.0" minHeight="10.0" prefHeight="30.0" />
+      <RowConstraints maxHeight="29.0" minHeight="0.0" prefHeight="28.0" />
+      <RowConstraints maxHeight="65.0" minHeight="10.0" prefHeight="31.0" />
+      <RowConstraints maxHeight="81.0" minHeight="10.0" prefHeight="27.0" />
+      <RowConstraints maxHeight="59.0" minHeight="5.0" prefHeight="37.0" />
+      <RowConstraints maxHeight="61.0" minHeight="10.0" prefHeight="30.0" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" />
+   </rowConstraints>
+   <children>
+      <ImageView fitHeight="615.0" fitWidth="905.0" GridPane.columnSpan="2147483647" GridPane.rowSpan="2147483647">
+         <image>
+            <Image url="@Images/background.jpg" />
+         </image>
+      </ImageView>
+   	  <ChoiceBox fx:id="sizeChoice" prefHeight="27.0" prefWidth="124.0" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+      <Button fx:id="doneButton" mnemonicParsing="false" onAction="#done" prefHeight="27.0" prefWidth="157.0" text="Done" GridPane.columnIndex="2" GridPane.rowIndex="12">
+         <font>
+            <Font name="Gill Sans Bold" size="14.0" />
+         </font></Button>
+      <Label alignment="CENTER" prefHeight="17.0" prefWidth="101.0" text="Size" textAlignment="CENTER" GridPane.rowIndex="3">
+         <font>
+            <Font name="Tahoma" size="17.0" />
+         </font>
+         <textFill>
+            <RadialGradient centerX="0.5786516853932585" centerY="0.47115384615384615" focusDistance="-0.16666666666666652" radius="1.0">
+               <stops>
+                  <Stop color="#fffffffa" />
+                  <Stop color="#e8dede" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </textFill></Label>
+      
+      <Label alignment="CENTER" prefHeight="17.0" prefWidth="108.0" text="Cheese" GridPane.rowIndex="4">
+         <font>
+            <Font name="Tahoma" size="17.0" />
+         </font>
+         <textFill>
+            <RadialGradient centerX="0.5786516853932585" centerY="0.47115384615384615" focusDistance="-0.16666666666666652" radius="1.0">
+               <stops>
+                  <Stop color="#fffffffa" />
+                  <Stop color="#e8dede" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </textFill></Label>
+      <Label alignment="CENTER" prefHeight="17.0" prefWidth="106.0" text="Ham" textFill="WHITE" GridPane.rowIndex="5">
+         <font>
+            <Font name="Tahoma" size="17.0" />
+         </font></Label>
+      <Label alignment="CENTER" prefHeight="17.0" prefWidth="110.0" text="Green Pepper" textFill="WHITE" GridPane.rowIndex="6">
+         <font>
+            <Font name="Tahoma" size="17.0" />
+         </font></Label>
+      <Label alignment="CENTER" prefHeight="17.0" prefWidth="110.0" text="Pineappple" textFill="WHITE" GridPane.rowIndex="7">
+         <font>
+            <Font name="Tahoma" size="17.0" />
+         </font></Label>
+      <Label alignment="CENTER" prefHeight="17.0" prefWidth="153.0" text="Order Total:" textFill="#fffefe" GridPane.columnIndex="4" GridPane.rowIndex="9">
+         <font>
+            <Font name="Tahoma" size="17.0" />
+         </font></Label>
+      <Label alignment="CENTER" prefHeight="17.0" prefWidth="106.0" text="Quantity:" textFill="WHITE" GridPane.rowIndex="8">
+         <font>
+            <Font size="17.0" />
+         </font></Label>
+      <TextField fx:id="quantityField" text="1" GridPane.columnIndex="2" GridPane.rowIndex="8">
+         <font>
+            <Font name="Tahoma" size="18.0" />
+         </font></TextField>
+      <TextField fx:id="totalField" editable="false" GridPane.columnIndex="5" GridPane.rowIndex="9">
+         <font>
+            <Font name="Tahoma" size="18.0" />
+         </font></TextField>
+      <ChoiceBox fx:id="cheeseChoice" prefWidth="150.0" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+      <ChoiceBox fx:id="hamChoice" prefWidth="150.0" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+      <ChoiceBox fx:id="greenPepChoice" prefWidth="150.0" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+      <ChoiceBox fx:id="pineappleChoice" prefWidth="150.0" GridPane.columnIndex="2" GridPane.rowIndex="7" />
+      <Label alignment="CENTER" prefHeight="24.0" prefWidth="107.0" text="Subtotal:" textFill="WHITE" GridPane.rowIndex="9">
+         <font>
+            <Font name="Tahoma" size="17.0" />
+         </font></Label>
+      <TextField fx:id="subtotal" editable="false" prefHeight="35.0" prefWidth="135.0" GridPane.columnIndex="2" GridPane.rowIndex="9">
+         <font>
+            <Font name="Tahoma" size="18.0" />
+         </font></TextField>
+      <Button fx:id="saveButton" mnemonicParsing="false" onAction="#saveToOrder" prefHeight="28.0" prefWidth="126.0" text="Add to Order" GridPane.columnIndex="2" GridPane.rowIndex="10">
+         <font>
+            <Font name="Gill Sans Bold" size="14.0" />
+         </font></Button>
+      <TextArea fx:id="orderSummaryArea" editable="false" prefHeight="123.0" prefWidth="383.0" GridPane.columnIndex="4" GridPane.columnSpan="3" GridPane.rowIndex="4" GridPane.rowSpan="4">
+         <font>
+            <Font name="Tahoma Bold" size="14.0" />
+         </font></TextArea>
+      <Label alignment="CENTER" prefHeight="29.0" prefWidth="225.0" text="Order Summary:" textFill="WHITE" GridPane.columnIndex="5" GridPane.columnSpan="2" GridPane.rowIndex="3">
+         <font>
+            <Font name="Tahoma Bold" size="24.0" />
+         </font></Label>
+      <HBox alignment="CENTER" prefHeight="76.0" prefWidth="358.0" style="-fx-background-image: \@images.background.jpg;" GridPane.columnSpan="7" GridPane.rowIndex="1">
+         <children>
+            <ImageView fitHeight="50.0" fitWidth="98.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Images/pizzaSlice.png" />
+               </image>
+            </ImageView>
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="56.0" prefWidth="268.0" text="Pizza Builder">
+               <font>
+                  <Font name="Tahoma Bold" size="36.0" />
+               </font>
+               <padding>
+                  <Insets top="10.0" />
+               </padding>
+               <textFill>
+                  <RadialGradient centerX="0.47752808988764045" centerY="1.0" focusDistance="0.09523809523809534" radius="1.0">
+                     <stops>
+                        <Stop color="#c2642ffa" />
+                        <Stop color="#f9ff00" offset="1.0" />
+                     </stops>
+                  </RadialGradient>
+               </textFill>
+            </Label>
+            <ImageView fitHeight="52.0" fitWidth="57.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Images/pizzaSlice.png" />
+               </image>
+            </ImageView>
+         </children>
+         <padding>
+            <Insets top="20.0" />
+         </padding>
+      </HBox>
+      <ImageView fitHeight="28.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="3">
+         <image>
+            <Image url="@Images/fullPizza.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="21.0" fitWidth="46.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="4">
+         <image>
+            <Image url="@Images/cheese.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="23.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="5">
+         <image>
+            <Image url="@Images/ham.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="27.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="6">
+         <image>
+            <Image url="@Images/greenPep.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="29.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="7">
+         <image>
+            <Image url="@Images/pineapple.png" />
+         </image>
+      </ImageView>
+   </children>
+</GridPane>
