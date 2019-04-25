@@ -1,0 +1,33 @@
+(This assignment was inspired by problems 4.12 and 5.8 in the Savitch text.)
+
+In order to complete a pizza ordering system you need to write three classes: Pizza, IllegalPizza and LineItem. In brief, Pizza describes a single pizza, IllegalPizza is the exception class and LineItem contains the pizza and the number of those pizzas for a single line in the pizza order.
+
+The Pizza object describes a fairly plain pizza:
+
+The attributes are:
+size, which can be "small", "medium" or "large", only.
+cheese, which can be "single", "double" or "triple".
+pineapple, which can be "none" or "single".
+green pepper, which can be "none" or "single".
+ham, which can be "none" or "single".
+In addition to the restrictions listed above, a Pizza cannot have pineapple or green pepper unless it has ham. Just a matter of taste, I suppose!
+A second default constructor will create a small pizza with just single cheese and ham.
+A small cheese pizza with single cheese only is $7.00, a medium with cheese only is $9.00 and a large with cheese only is $11.00. Each additional topping costs $1.50 each.
+Your Pizza object must be immutable.
+You only need a single accessor called "getCost" that returns the cost of the pizza.
+You will need a toString method. Here are some examples of the kind of string to be returned by this method:
+medium pizza, double cheese. Cost: $10.50 each.
+small pizza, single cheese, pineapple, green pepper, ham. Cost: $11.50 each.
+large pizza, triple cheese, pineapple, ham. Cost: $17.00 each.
+Include a proper equals method where the basis for equality is all attributes being identical.
+You won't need it because the Pizza object is immutable, but include a clone method anyways. This method will get tested in the JUnit tests.
+The Pizza object must implement the java.io.Serializable interface so that it can be saved to a file inside a LineItem object.
+Your IllegalPizza object is a typical Exception object. Write just the one constructor that takes a String type message.
+The LineItem object describes a single line item from your pizza order:
+
+It will contain a pointer to the Pizza object and the number of those pizzas ordered. The number of pizzas must lie between 1 and 100 inclusive.
+A second constructor defaults to a single pizza for the order.
+The number of pizzas attribute should be mutable, but the Pizza attribute should not.
+You will need accessors for both attributes as well as a third accessor that returns the total cost of the line item in the order. The line item cost is subject to a "bulk discount" - 10 to 20 pizzas, inclusive, gets a 10% discount and an order of more than 20 gets a 15% discount.
+You will need a toString that prefixes the number ordered to the result of the Pizza toString to show a complete line item. If the number of pizzas for the line item is less than ten, prefix the string with a space, so that the strings will line up when the order is displayed. Ignore tax.
+Finally, you will need a compareTo method that is based only on the total cost of the line item. To use the ArrayList sort you will need to implement the Comparable<LineItem> interface. When the order is listed on the screen it should list the highest total cost line items first followed by the lower total cost line items. This method should return zero if the cost difference is less than one dollar.
